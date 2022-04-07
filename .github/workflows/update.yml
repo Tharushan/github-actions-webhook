@@ -1,0 +1,12 @@
+name: Webhook actions trigger
+
+on:
+  repository_dispatch:
+    types: webhook-trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: echo "Hello World"
